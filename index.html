@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberGuard - Community Data Protection</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2563eb" />
+</head>
+<body>
+  <header>
+    <h1>CyberGuard PWA</h1>
+    <nav>
+      <button id="nav-page1" class="active" onclick="switchPage('page1')">Page 1: Insights</button>
+      <button id="nav-page2" onclick="switchPage('page2')">Page 2: Security Tools</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE 1: COMMUNITY FINDINGS & HYGIENE OVERVIEW -->
+    <section id="page1" class="page active">
+      <div class="card">
+        <h2>Community Engagement Project Overview</h2>
+        <p>
+          Conducted by <strong>Western College of Commerce and Business Management</strong>, 
+          this community tool provides real-time digital protection insights, actionable credential practices, 
+          and breach mitigations for urban smartphone and computer users.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Navi Mumbai Field Survey Findings (30 Respondents)</h2>
+        <p>Key vulnerabilities uncovered during empirical campus and community assessments:</p>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="number">63.3%</div>
+            <div class="label">Reuse Passwords Across Sites</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">43.3%</div>
+            <div class="label">Only Change Passwords After a Scare</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">50.0%</div>
+            <div class="label">Click Links in Urgent/Phishing SMS</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">36.7%</div>
+            <div class="label">Unaware of Data Breach Portals</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Core Rules for Personal Data Protection</h2>
+        <p>1. <strong>Passphrase Over Passwords:</strong> Use 4 random words strung together (e.g., <code>correct-horse-battery-staple</code>).</p>
+        <p>2. <strong>Eliminate Cleartext:</strong> Never keep passwords in phone notes or plain text files.</p>
+        <p>3. <strong>Enforce MFA/TOTP:</strong> Always prefer authenticator apps (Google/Microsoft Authenticator) over SMS OTPs.</p>
+      </div>
+    </section>
+
+    <!-- PAGE 2: INTERACTIVE HYGIENE TOOLS & AUDIT CHECKLIST -->
+    <section id="page2" class="page">
+      <div class="card">
+        <h2>Interactive Password Strength Analyzer</h2>
+        <p>Test the resilience of a password offline in real-time (no data is stored or transmitted):</p>
+        <input 
+          type="text" 
+          id="pwd-input" 
+          placeholder="Type a password to test (e.g., BlueCoffee#2026!)" 
+          autocomplete="off" 
+        />
+        <div class="meter-bar">
+          <div id="meter-fill" class="meter-fill"></div>
+        </div>
+        <div id="pwd-feedback" class="feedback-text">Enter a password to evaluate score.</div>
+      </div>
+
+      <div class="card">
+        <h2>Personal Cyber Health Checklist</h2>
+        <p>Complete this checklist to secure your smartphone and online accounts:</p>
+        <ul class="checklist">
+          <li>
+            <input type="checkbox" id="chk1" />
+            <label for="chk1">Enabled 2-Step Verification on primary Gmail / Apple ID</label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk2" />
+            <label for="chk2">Installed a secure Password Manager (Bitwarden / KeePass / 1Password)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk3" />
+            <label for="chk3">Audited smartphone app permissions (revoked Location/Mic from unused apps)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk4" />
+            <label for="chk4">Checked personal email on breach lookup service (Have I Been Pwned)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="chk5" />
+            <label for="chk5">Configured full disk encryption / PIN wipe before selling older devices</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Report Cyber Fraud in India</h2>
+        <p>
+          If you fall victim to financial cyber fraud or identity compromise, dial <strong>1930</strong> 
+          or lodge an immediate complaint at the National Cyber Crime Portal: 
+          <a href="https://cybercrime.gov.in" target="_blank" style="color: #38bdf8;">cybercrime.gov.in</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Western College of Commerce and Business Management • CEP 2026–2027
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
